@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="number game">
+    <meta name="keywords" content="numbers">
+    <meta name="author" content="devin-jhu">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>number game</title>
+  </head>
+  <body>
+   <p>Number game</p>
+    <p>Rules:Insert a number between 1-6 and see if the computer got the same random number</p>
+    Number:<input type="number" id="usernumber"><br>
+    <button onclick="number()">play</button><br>
+    <p>computer number:</p>
+    <p id="computernumber"></p>
+     <p>user number:</p>
+    <p id="usernumber"></p>
+    <script>
+      let computernumber;
+      let usernumber;
+      function number() {
+        computernumber=document.getElementById("computernumber").innerHTML = Math.floor(Math.random() * 6) + 1;
+        usernumber=document.getElementById("usernumber").value;
+        if (usernumber==computernumber) {
+          alert ("you win the numbers game");
+        }
+        else {
+          alert ("you lose the numbers game");
+        }
+      }
+    </script>
+  </body>
+</html>
